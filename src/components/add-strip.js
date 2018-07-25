@@ -4,9 +4,6 @@ import { Button, ContextualMenu, ContextualMenuDropdown, Link } from 'vanilla-fr
 export default class AddStrip extends React.Component {
   constructor() {
     super();
-    this.state = {
-      'open': false
-    };
     this.stripLayout = React.createRef();
     this.handleClick = this.handleClick.bind(this);
   }
