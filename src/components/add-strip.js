@@ -14,9 +14,9 @@ export default class AddStrip extends React.Component {
 
   render() {
     return (
-      <div className="p-strip">
+      <div className="p-strip--ghost">
         <div className="row u-align--center">
-          <Button positive onClick={this.handleClick}>Create strip</Button>
+          <Button positive onClick={this.handleClick} className="u-no-margin--bottom">Create strip</Button>
         </div>
       </div>
     );
