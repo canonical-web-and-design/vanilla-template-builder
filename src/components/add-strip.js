@@ -10,7 +10,6 @@ export default class AddStrip extends React.Component {
 
   handleClick(type) {
     console.log(type);
-    this.setState({'type': type});
   }
 
   render() {
