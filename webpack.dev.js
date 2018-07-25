@@ -10,11 +10,16 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
+        use: [{
+          loader: "style-loader"
+      }, {
+          loader: "css-loader"
+      }, {
+          loader: "sass-loader",
+          options: {
+              includePaths: ["node_modules"]
+          }
+      }]
       }
     ]
   },

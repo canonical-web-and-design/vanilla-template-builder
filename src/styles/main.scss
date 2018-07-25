@@ -1,3 +1,7 @@
-.red {
-  color: red;
+@import 'node_modules/vanilla-framework/scss/vanilla';
+@include vanilla;
+
+.p-strip--ghost {
+  @extend %vf-strip;
+  border: 3px dashed $color-dark;
 }

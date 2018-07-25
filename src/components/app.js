@@ -1,3 +1,4 @@
+import '../styles/main.scss';
 import React, { Component } from 'react';
 import { Navigation, NavigationBanner, NavigationLink } from 'vanilla-framework-react';
 
@@ -18,3 +19,4 @@ export default class App extends Component {
     );
   }
 }
+
