@@ -2,13 +2,16 @@ import React from 'react';
 import { Button, ContextualMenu, ContextualMenuDropdown, Link } from 'vanilla-framework-react';
 
 export default class AddStrip extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.stripLayout = React.createRef();
     this.handleClick = this.handleClick.bind(this);
+    this.emitter = props.emitter;
   }
 
   handleClick(type) {
+    const payload  = { type }
+    this.emitter.emit('COMPONENT_SELECTED', payload)
     console.log(type);
   }
 
