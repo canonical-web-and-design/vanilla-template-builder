@@ -1,15 +1,20 @@
 import React from 'react';
-import VOMFactory from '../components/vom-factory';
 
 export default class VomContainer extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.VOM = [];
+    this.emitter = props.emitter;
+    this.emitter.addListener('CREATE_COMPONENT', payload => {
+      this.VOM.push(payload);
+      this.forceUpdate();
+    });
   }
 
   render() {
     return (
       <div>
-        {VOMFactory.build('strip-4-8')}
+        {this.VOM.map((component, key) => <div key={key}>{component}</div>)}
       </div>
     );
   }

@@ -14,10 +14,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Navigation>
+        <Navigation emitter={this.emitter}>
           <NavigationBanner href="#" logo={{src: 'https://assets.ubuntu.com/v1/d96d86b5-vanilla_black-orange_hex.svg', alt: ''}} />
         </Navigation>
-        <VomContainer type="6 | 6" />
+        <VomContainer emitter={this.emitter}/>
         <AddStrip emitter={this.emitter}></AddStrip>
       </div>
     );

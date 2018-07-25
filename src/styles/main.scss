@@ -4,4 +4,10 @@
 .p-strip--ghost {
   @extend %vf-strip;
   border: 3px dashed $color-dark;
+  padding-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+[class^="p-strip"].is-bordered {
+  margin-bottom: 0;
 }
